@@ -1,368 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Residencial Monarca: residencial geriátrico en Montevideo, Uruguay. Un hogar donde cuidar es acompañar, con atención profesional y equipo de enfermería.">
-    <title>Monarca · Versión 2</title>
-    <link rel="canonical" href="https://monarca-residencial.netlify.app/">
-
-    <!-- Íconos de pestaña / pantalla de inicio -->
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
-    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-
-    <!-- Vista previa al compartir (WhatsApp, Facebook, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Residencial Monarca">
-    <meta property="og:locale" content="es_UY">
-    <meta property="og:url" content="https://monarca-residencial.netlify.app/">
-    <meta property="og:title" content="Monarca | Residencial Geriátrico en Montevideo">
-    <meta property="og:description" content="Residencial Monarca: residencial geriátrico en Montevideo, Uruguay. Un hogar donde cuidar es acompañar, con atención profesional y equipo de enfermería.">
-    <meta property="og:image" content="https://res.cloudinary.com/p0qlmlor/image/upload/f_jpg,q_auto,w_1200,h_630,c_fill,g_auto/v1/monarca/instalaciones/fachada.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Datos estructurados: le dicen a Google qué es, dónde está y cómo contactarlo -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Residencial Monarca",
-      "description": "Residencial geriátrico en Montevideo, Uruguay, con atención profesional y equipo de enfermería.",
-      "url": "https://monarca-residencial.netlify.app/",
-      "logo": "https://monarca-residencial.netlify.app/img/Logo_verdeOliva_transparente.webp",
-      "image": "https://res.cloudinary.com/p0qlmlor/image/upload/f_jpg,q_auto,w_1200,h_630,c_fill,g_auto/v1/monarca/instalaciones/fachada.jpg",
-      "telephone": "+59899081886",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Gral. Rivera 5734 esquina Vicente Rocafuerte",
-        "addressLocality": "Montevideo",
-        "addressRegion": "Montevideo",
-        "postalCode": "11400",
-        "addressCountry": "UY"
-      },
-      "areaServed": { "@type": "City", "name": "Montevideo" },
-      "sameAs": [
-        "https://www.instagram.com/recidencialmonarca",
-        "https://www.facebook.com/share/1JEh8uoqEZ/"
-      ]
-    }
-    </script>
-    
-    <!-- Preconexiones para acelerar DNS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
-
-    <!-- Fuentes y CSS externos cargados sin bloquear el renderizado -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
-    <!-- Tu CSS principal -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/variantes/v2-editorial.css">
-
-    
-    <link rel="preload" as="image" href="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200/v1/monarca/instalaciones/fachada.webp" fetchpriority="high">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Monarca · Versión 2 · Editorial</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --tinta:#1E2A22; --suave:#4A524A; --linea:#CFD5CC; --verde:#2F3D33; --fondo:#FFFFFF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; color: var(--tinta); background: var(--fondo); line-height: 1.85; font-size: 1.07rem; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 500; }
+  .col { width: min(680px, 90%); margin: 0 auto; }
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 6%; border-bottom: 1px solid var(--linea); }
+  .top img { width: 120px; }
+  .top nav a { color: var(--suave); text-decoration: none; margin-left: 1.4rem; font-size: .92rem; }
+  .portada { padding: 7rem 6% 5rem; }
+  .portada h1 { font-size: clamp(4.5rem, 14vw, 10rem); line-height: .9; letter-spacing: -.02em; }
+  .portada .bajada { font-size: 1.6rem; font-style: italic; margin: 2rem 0 1.4rem; color: var(--verde); }
+  .portada p { max-width: 540px; color: var(--suave); }
+  .foto { height: 70vh; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1800/v1/monarca/instalaciones/fachada.webp') center/cover; }
+  .bloque { padding: 5rem 0; border-bottom: 1px solid var(--linea); }
+  .bloque h2 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 1.6rem; }
+  .bloque h3 { font-size: 1.4rem; margin: 2rem 0 .4rem; }
+  .bloque p { color: var(--suave); }
+  .lista { list-style: none; }
+  .lista li { padding: .9rem 0; border-top: 1px solid var(--linea); }
+  .lista li strong { display: block; color: var(--tinta); }
+  .vals { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem 3rem; }
+  .vals h3 { margin: 0 0 .3rem; font-size: 1.25rem; }
+  .vals p { margin: 0; font-size: .98rem; }
+  .galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  figure img { width: 100%; height: 280px; object-fit: cover; }
+  figcaption { font-size: .88rem; color: var(--suave); margin-top: .4rem; }
+  .cierre { padding: 5rem 6%; }
+  .cierre a { color: var(--verde); }
+  footer { padding: 2rem 6%; color: var(--suave); font-size: .9rem; border-top: 1px solid var(--linea); }
+  @media (max-width: 720px) { .vals, .galeria { grid-template-columns: 1fr; } .top nav { display: none; } }
+</style>
 </head>
 <body>
+<header class="top">
+  <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
+  <nav><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca" width="238" height="118">
-        </div>
+<section class="portada" id="inicio">
+  <h1>Monarca</h1>
+  <p class="bajada">Un hogar donde cuidar es acompañar.</p>
+  <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
+</section>
+<div class="foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav>
-            <ul id="nav-list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#mision-vision">Nosotros</a></li>
-                <li><a href="#valores">Valores</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#instalaciones">Instalaciones</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<section class="bloque" id="nosotros"><div class="col">
+  <h2>Sobre nosotros</h2>
+  <p>Javier Bia, Lic. en Enfermería, dirige Monarca con más de 20 años de experiencia en salud, especialmente en salud mental y el cuidado de personas, y con formación en geriatría.</p>
+  <h3>Misión</h3>
+  <p>Brindar un hogar cálido, seguro y acogedor, donde cada persona sea cuidada con respeto, empatía y dedicación.</p>
+  <h3>Visión</h3>
+  <p>Ser un residencial reconocido por la calidad humana de su atención, la confianza de las familias y el compromiso con el bienestar integral de sus residentes.</p>
+</div></section>
 
-    <!-- Hero -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>MONARCA</h1>
-            <h2>“Un hogar donde cuidar es acompañar”</h2>
-            <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
-            <a href="#contacto" class="btn">Contactate con nosotros</a>
-        </div>
-    </section>
+<section class="bloque"><div class="col">
+  <h2>Valores</h2>
+  <div class="vals">
+    <div><h3>Calidez humana</h3><p>Cercanía, afecto y escucha.</p></div>
+    <div><h3>Respeto y dignidad</h3><p>Historia, preferencias y costumbres de cada residente.</p></div>
+    <div><h3>Seguridad y confianza</h3><p>Un entorno seguro y tranquilo.</p></div>
+    <div><h3>Profesionalismo</h3><p>Equipo capacitado y comprometido.</p></div>
+    <div><h3>Bienestar</h3><p>Vida activa y confortable.</p></div>
+    <div><h3>Sentido de hogar</h3><p>Un lugar donde compartir y pertenecer.</p></div>
+  </div>
+</div></section>
 
-    <!-- Perfil del Director (Izquierda) y Misión/Visión (Derecha) -->
-    <section id="mision-vision">
-        <h2 class="section-title">Sobre Nosotros</h2>
-        <div class="about-grid">
-            
-            <!-- Columna Izquierda: Perfil del Director con botón expandible -->
-            <div class="card-director">
-                <div>
-                    <div class="director-header">
-                        <img src="../img/director.webp" alt="Director de Residencial Monarca" class="director-img" width="240" height="323">
-                        <div>
-                            <h3>Dirección y Compromiso</h3>
-                            <p class="director-name">Javier Bia</p>
-                            <span class="director-subtitle">Lic. en Enfermería</span>
-                        </div>
-                    </div>
+<section class="bloque" id="servicios"><div class="col">
+  <h2>Servicios</h2>
+  <ul class="lista">
+    <li><strong>Instalaciones</strong>Habitaciones equipadas y calefaccionadas, baños adaptados, videovigilancia, Wi-Fi y áreas comunes amplias y luminosas.</li>
+    <li><strong>Alimentación</strong>Desayuno, almuerzo, merienda, cena y colaciones, con dietas especiales según cada necesidad.</li>
+    <li><strong>Talleres y actividades</strong>Talleres recreativos, gimnasia funcional, manualidades y momentos de encuentro.</li>
+    <li><strong>Equipo de enfermería</strong>Administración de medicación, seguimiento diario, coordinación con familias y profesionales, y protocolos de cuidado.</li>
+  </ul>
+</div></section>
 
-                    <div class="expandable-container" id="director-text-container">
-                        <div class="expandable-content">
-                            <p class="content-subtitle">Mi compromiso con Monarca</p>
-                            <p>Soy Licenciado en Enfermería y cuento con más de 20 años de experiencia en el ámbito de la salud, con una trayectoria especialmente vinculada a la salud mental y al cuidado de las personas.</p>
-                            
-                            <p>A lo largo de mi carrera he buscado ampliar permanentemente mi formación para brindar una atención responsable, humana y de calidad. Cuento con capacitación en geriatría, manejo y administración de medicamentos, RCP, lengua de señas y atención ante situaciones de crisis, entre otras áreas vinculadas al cuidado.</p>
-                            
-                            <p>También tuve la oportunidad de participar en misiones de paz de la Organización de las Naciones Unidas (ONU), una experiencia que enriqueció mi formación profesional y personal, fortaleciendo mis capacidades para trabajar en diferentes contextos y afrontar situaciones complejas.</p>
-                            
-                            <p>Mi formación incluye además gestión de riesgos, responsabilidad social empresarial y estrategias para la optimización del rol del acompañante y su integración en la vida cotidiana de las personas. He participado en jornadas y capacitaciones relacionadas con el adulto mayor, medicina defensiva y medicina asertiva, aspectos médico-toxicológicos vinculados al uso de sustancias psicoactivas y estrategias de intervención ante situaciones de crisis.</p>
+<section class="bloque"><div class="col">
+  <h2>Instalaciones</h2>
+  <div class="galeria" data-cloudinary-tag="monarca_instalaciones" data-vacio="Próximamente más información sobre instalaciones."></div>
+</div></section>
 
-                            <p class="content-subtitle-spaced">¿Por qué Monarca?</p>
-                            <p>Después de tantos años trabajando en el ámbito de la salud, entiendo que cuidar no significa solamente atender una necesidad. Cuidar también es escuchar, respetar, acompañar y estar presente.</p>
-                            
-                            <p>Por eso nace Residencial Monarca: con la intención de crear un espacio donde cada persona pueda sentirse segura, valorada y acompañada, y donde las familias encuentren la tranquilidad de saber que sus seres queridos están en un entorno cálido y cuidado.</p>
-                            
-                            <p>Mi compromiso es trabajar junto a nuestro equipo para que Monarca sea mucho más que un residencial: sea un hogar.<br>
-                            <strong>Bienvenidos a Monarca. Un hogar donde cuidar es acompañar.</strong></p>
-                        </div>
-                    </div>
-                </div>
+<section class="bloque" id="galeria"><div class="col">
+  <h2>Galería</h2>
+  <div class="galeria" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
+</div></section>
 
-                <div class="expandable-btn-container">
-                    <button class="btn-leer-mas" data-target="director-text-container">Ver más</button>
-                </div>
-            </div>
+<section class="cierre" id="contacto"><div class="col">
+  <h2 style="font-family:'Playfair Display',serif;font-size:2.6rem;margin-bottom:1.2rem">Contacto</h2>
+  <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo</p>
+  <p><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
+  <p><a href="https://www.instagram.com/recidencialmonarca">Instagram</a> · <a href="https://www.facebook.com/share/1JEh8uoqEZ/">Facebook</a></p>
+</div></section>
 
-            <!-- Columna Derecha: Misión y Visión unificadas -->
-            <div class="card-mv combined-mv">
-                <div>
-                    <div class="mv-block">
-                        <h3><i class="fas fa-bullseye"></i> Nuestra Misión</h3>
-                        <p>En Residencial Monarca brindamos un hogar cálido, seguro y acogedor, donde cada persona sea cuidada con respeto, empatía y dedicación. Contamos con un equipo capacitado y una atención cercana, orientada a promover la autonomía, el bienestar y la calidad de vida de cada residente. Queremos que quienes viven en Monarca se sientan acompañados, valorados y, sobre todo, como en casa.</p>
-                    </div>
-                    
-                    <div class="mv-divider"></div>
+<footer>© Residencial Monarca · Montevideo, Uruguay</footer>
 
-                    <div class="mv-block">
-                        <h3><i class="fas fa-eye"></i> Nuestra Visión</h3>
-                        <p>Ser un residencial reconocido por la calidad humana de su atención, la confianza de las familias y el compromiso con el bienestar integral de sus residentes. Aspiramos a construir un lugar donde envejecer sea una etapa vivida con dignidad, tranquilidad, afecto y respeto.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Valores -->
-    <section id="valores">
-        <h2 class="section-title">Nuestros Valores</h2>
-        <div class="values-grid">
-            <div class="value-item">
-                <i class="fas fa-heart"></i>
-                <h3>Calidez Humana</h3>
-                <p>Cuidamos desde la cercanía, el afecto y la escucha. Buscamos que cada residente se sienta acompañado, querido y contenido.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-hand-holding-heart"></i>
-                <h3>Respeto y Dignidad</h3>
-                <p>Reconocemos la historia, las preferencias, las costumbres y la individualidad de cada residente, promoviendo un trato digno.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Seguridad y Confianza</h3>
-                <p>Trabajamos para ofrecer un entorno seguro, tranquilo y cuidado, generando confianza tanto en residentes como en sus familias.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-user-md"></i>
-                <h3>Profesionalismo</h3>
-                <p>Contamos con un equipo de profesionales capacitados y comprometidos para brindar una atención responsable, cercana y de calidad.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-smile"></i>
-                <h3>Bienestar y Calidad de Vida</h3>
-                <p>Promovemos una vida activa y confortable, respetando las posibilidades, necesidades y preferencias de cada residente.</p>
-            </div>
-            <div class="value-item">
-                <i class="fas fa-home"></i>
-                <h3>Sentido de Hogar</h3>
-                <p>Monarca busca mucho más que un lugar donde vivir: queremos construir un hogar donde compartir y pertenecer.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" style="background-color: var(--bg-light);">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-container">
-            
-            <!-- Instalaciones y Comodidades -->
-            <div class="service-block">
-                <div>
-                    <h3><i class="fas fa-home"></i> Instalaciones</h3>
-                    <p>Un espacio pensado para sentirse como en casa. En Residencial Monarca cuidamos cada detalle para ofrecer un entorno cálido, confortable y seguro.</p>
-                    
-                    <div class="expandable-container" id="service-instalaciones">
-                        <div class="expandable-content">
-                            <ul class="service-list" style="margin-top: 1rem;">
-                                <li><strong>Habitaciones confortables:</strong> Habitaciones equipadas y calefaccionadas, preparadas para brindar comodidad, descanso y tranquilidad en un ambiente acogedor.</li>
-                                <li><strong>Accesibilidad:</strong> Contamos con espacios pensados para facilitar la movilidad, el desplazamiento y la autonomía de nuestros residentes.</li>
-                                <li><strong>Baños adaptados:</strong> Baños adaptados para brindar mayor seguridad, comodidad y facilidad de uso, contemplando las necesidades de cada persona.</li>
-                                <li><strong>Seguridad y tranquilidad:</strong> Disponemos de sistema de videovigilancia, como parte de las medidas destinadas a favorecer un entorno cuidado y seguro.</li>
-                                <li><strong>Conectividad:</strong> Contamos con Wi-Fi, facilitando la comunicación y el contacto con familiares y seres queridos.</li>
-                                <li><strong>Áreas comunes:</strong> Contamos con espacios amplios, confortables y luminosos, pensados para compartir, conversar, realizar actividades y disfrutar momentos de encuentro. Además, disponemos de áreas exteriores adaptadas y cuidadas, ideales para disfrutar al aire libre, compartir con familiares y crear momentos especiales en un entorno agradable y tranquilo.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="expandable-btn-container">
-                    <button class="btn-leer-mas" data-target="service-instalaciones">Ver más</button>
-                </div>
-            </div>
-            
-            <!-- Alimentación -->
-            <div class="service-block service-fixed-height">
-                <div>
-                    <h3><i class="fas fa-utensils"></i> Alimentación</h3>
-                    <p>En Residencial Monarca ofrecemos una alimentación variada y equilibrada, contemplando las necesidades de cada residente.</p>
-                    <ul class="service-list">
-                        <li><strong>Servicio completo:</strong> Contamos con desayuno, almuerzo, merienda, cena y colaciones, además de dietas especiales de acuerdo con las necesidades y requerimientos de cada persona.</li>
-                        <li><strong>Sentido de hogar:</strong> Buscamos que cada comida sea también un momento agradable para compartir, disfrutar y sentirse como en casa.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Talleres y Actividades -->
-            <div class="service-block">
-                <div>
-                    <h3><i class="fas fa-puzzle-piece"></i> Talleres y Actividades</h3>
-                    <p>En Residencial Monarca promovemos espacios de encuentro, movimiento y creatividad, adaptados a las posibilidades e intereses de cada residente.</p>
-                    
-                    <div class="expandable-container" id="service-talleres">
-                        <div class="expandable-content">
-                            <ul class="service-list" style="margin-top: 1rem;">
-                                <li><strong>Talleres recreativos:</strong> Actividades pensadas para estimular la participación, el entretenimiento y el vínculo con los demás.</li>
-                                <li><strong>Gimnasia funcional:</strong> Ejercicios adaptados que favorecen el movimiento, la movilidad y el mantenimiento de las capacidades físicas.</li>
-                                <li><strong>Manualidades y expresión:</strong> Espacios para desarrollar la creatividad, expresarse y disfrutar de actividades que estimulan las habilidades y la imaginación.</li>
-                                <li><strong>Momentos de encuentro:</strong> Propuestas para compartir, conversar y fortalecer los vínculos en un ambiente cálido y agradable.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="expandable-btn-container">
-                    <button class="btn-leer-mas" data-target="service-talleres">Ver más</button>
-                </div>
-            </div>
-
-            <!-- Equipo y Enfermería -->
-            <div class="service-block">
-                <div>
-                    <h3><i class="fas fa-user-nurse"></i> Equipo, Enfermería</h3>
-                    <p>En Residencial Monarca contamos con un equipo de profesionales de la salud comprometido con el cuidado y bienestar de cada residente.</p>
-                    
-                    <div class="expandable-container" id="service-enfermeria">
-                        <div class="expandable-content">
-                            <p style="margin-bottom: 1rem;">Nuestro trabajo incluye:</p>
-                            <ul class="service-list">
-                                <li><strong>Administración:</strong> Control de stock y administración de la medicación, de acuerdo con las indicaciones correspondientes.</li>
-                                <li><strong>Control continuo:</strong> Seguimiento diario del estado y las necesidades de cada residente.</li>
-                                <li><strong>Comunicación:</strong> Coordinación con profesionales de la salud y referentes familiares cuando corresponde.</li>
-                                <li><strong>Atención segura:</strong> Aplicación de protocolos y pautas de cuidado, orientados a brindar una atención segura y responsable.</li>
-                                <li><strong>Continuidad del cuidado:</strong> Registro y seguimiento de la información relevante, favoreciendo la continuidad del cuidado.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="expandable-btn-container">
-                    <button class="btn-leer-mas" data-target="service-enfermeria">Ver más</button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Galería de Instalaciones Dinámica -->
-    <section id="instalaciones" class="gallery-container">
-        <h2 class="section-title">Nuestras Instalaciones</h2>
-        
-        <div class="gallery-filters" id="instalaciones-filtros">
-            <button class="filter-btn active" data-filter="all">Todas</button>
-            <button class="filter-btn" data-filter="exterior">Exterior</button>
-            <button class="filter-btn" data-filter="interior">Áreas Comunes</button>
-            <button class="filter-btn" data-filter="habitacion">Habitaciones</button>
-        </div>
-
-        <div class="gallery-grid" id="instalaciones-dinamicas">
-            <!-- Se carga dinámicamente desde Cloudinary -->
-        </div>
-    </section>
-    <!-- Galería de Actividades Dinámica -->
-    <section id="galeria" class="gallery-container">
-        <h2 class="section-title">Galería</h2>
-        
-        <div class="gallery-filters">
-            <p style="text-align: center; color: var(--text-muted); width: 100%;">Momentos y actividades en Residencial Monarca</p>
-        </div>
-
-        <div class="gallery-grid" id="galeria-dinamica">
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Imagen ampliada">
-    </div>
-
-    <!-- Contacto -->
-    <section id="contacto">
-        <h2 class="section-title">Contacto</h2>
-        <div class="contact-content">
-            <p>¿Querés coordinar una visita o tenés alguna consulta? Estamos para escucharte y asesorarte de forma personalizada.</p>
-            <p style="margin-top: 1.5rem; font-weight: 500;">
-                <i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 8px;"></i>
-                <strong>DIRECCIÓN:</strong> <span data-config="direccion">Rivera 5734 esquina Vicente Rocafuerte</span>
-            </p>
-            <iframe class="mapa-ubicacion" title="Ubicación de Residencial Monarca en Montevideo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; width:100%; max-width:600px; height:320px; border-radius:12px; margin-top:1.5rem;" src="https://www.google.com/maps?q=-34.890897,-56.083608&z=18&output=embed"></iframe>
-            <div class="social-icons">
-                <a href="https://whatsapp.com" data-config="whatsapp" target="_blank" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://instagram.com" data-config="instagram" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com" data-config="facebook" target="_blank" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://maps.google.com/?q=-34.890897,-56.083608" data-config="mapa" target="_blank" title="Ubicación" aria-label="Ver ubicación en Google Maps"><i class="fas fa-map-marker-alt"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Botón flotante de WhatsApp -->
-<a href="https://whatsapp.com" data-config="whatsapp-flotante" class="whatsapp-float" target="_blank" aria-label="Chat de WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-    <footer>
-        <p>&copy; 2026 Residencial Monarca. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Scripts con defer para no bloquear el renderizado -->
-    <script src="../js/config.js" defer></script>
-    <script src="../js/main.js" defer></script>
+<script src="../js/config.js"></script>
+<script src="../js/galeria-cloudinary.js"></script>
 </body>
 </html>
