@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Monarca · Versión 2 · Invernadero</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<style>
+  :root { --verde:#2F6B5A; --verdeoscuro:#1D4438; --vidrio:#E9F2EE; --bronce:#8E6A2C; --tinta:#1E2B26; --gris:#43514B; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Literata', Georgia, serif; font-size: 1.16rem; line-height: 1.8; color: var(--tinta); background: #F4F8F6; }
+  :focus-visible { outline: 3px solid var(--bronce); outline-offset: 3px; }
+  .wrap { width: min(980px, 90%); margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 5%; background: #F4F8F6; border-bottom: 1px solid #CFDDD6; }
+  header img { width: 110px; }
+  header nav a { color: var(--verde); text-decoration: none; margin-left: 1.4rem; font-weight: 600; font-size: 1rem; }
+  .arcadas { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 80vh; }
+  .arcadas .foto { background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1400/v1/monarca/instalaciones/fachada.webp') center/cover; border-radius: 0 0 0 0; }
+  .arcadas .texto { display: flex; flex-direction: column; justify-content: center; padding: 4rem 6%; background: var(--vidrio); }
+  .arcadas h1 { font-size: clamp(3rem, 7vw, 4.8rem); font-weight: 700; color: var(--verdeoscuro); line-height: 1.05; }
+  .arcadas h2 { font-size: 1.45rem; font-weight: 400; font-style: italic; margin: 1.2rem 0; color: var(--verde); }
+  .arcadas p { color: var(--gris); max-width: 460px; }
+  .boton { margin-top: 1.8rem; align-self: flex-start; border: 2px solid var(--verde); color: var(--verde); padding: .9rem 2rem; border-radius: 999px; text-decoration: none; font-weight: 600; }
+  .boton:hover { background: var(--verde); color: #fff; }
+  section.bloque { padding: 4.5rem 0; }
+  h2.t { font-size: 2.2rem; font-weight: 600; color: var(--verdeoscuro); margin-bottom: 1.8rem; }
+  .panel { background: #fff; border-radius: 180px 180px 18px 18px; padding: 3.2rem 2.6rem 2.6rem; border: 1px solid #CFDDD6; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+  .dos h3 { color: var(--verde); font-size: 1.3rem; margin-bottom: .4rem; }
+  .dos p, .dos li { color: var(--gris); }
+  .dos ul { padding-left: 1.2rem; }
+  .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .vals div { background: var(--vidrio); border-radius: 14px; padding: 1.4rem; }
+  .vals h3 { color: var(--verdeoscuro); font-size: 1.15rem; margin-bottom: .3rem; }
+  .vals p { margin: 0; color: var(--gris); font-size: 1rem; }
+  .fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+  figure img { width: 100%; height: 250px; object-fit: cover; border-radius: 160px 160px 12px 12px; }
+  figcaption { text-align: center; font-size: 1rem; color: var(--gris); margin-top: .4rem; }
+  .contacto { background: var(--verde); color: #fff; padding: 4.5rem 6%; text-align: center; }
+  .contacto a { color: #fff; font-weight: 600; }
+  footer { text-align: center; padding: 1.6rem; color: var(--gris); }
+  @media (max-width: 800px) { .arcadas, .dos, .vals { grid-template-columns: 1fr; } .arcadas .foto { height: 40vh; } header nav { display: none; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header>
+  <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
+  <nav><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
+</header>
+
+<section class="arcadas" id="inicio">
+  <div class="foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
+  <div class="texto">
+    <h1>Monarca</h1>
+    <h2>Un hogar donde cuidar es acompañar</h2>
+    <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
+    <a class="boton" href="#contacto">Contactate con nosotros</a>
+  </div>
+</section>
+
+<section class="wrap bloque" id="nosotros">
+  <div class="panel">
+    <h2 class="t">Sobre nosotros</h2>
+    <div class="dos">
+      <div>
+        <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="150" height="202" style="display:block;width:150px;height:auto;border-radius:8px;margin:0 0 1rem">
+        <h3>Dirección y compromiso</h3>
+        <p><strong>Javier Bia</strong>, Lic. en Enfermería, con más de 20 años de experiencia en salud, especialmente en salud mental y el cuidado de personas, y formación en geriatría.</p>
+      </div>
+      <div>
+        <h3>Misión</h3>
+        <p>Brindar un hogar cálido, seguro y acogedor, donde cada persona sea cuidada con respeto, empatía y dedicación.</p>
+        <h3 style="margin-top:1.4rem">Visión</h3>
+        <p>Ser un residencial reconocido por la calidad humana de su atención, la confianza de las familias y el compromiso con el bienestar integral de sus residentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap bloque" id="valores">
+  <h2 class="t">Valores</h2>
+  <div class="vals">
+    <div><h3>Calidez humana</h3><p>Cercanía, afecto y escucha.</p></div>
+    <div><h3>Respeto y dignidad</h3><p>Historia y costumbres de cada residente.</p></div>
+    <div><h3>Seguridad y confianza</h3><p>Un entorno seguro y tranquilo.</p></div>
+    <div><h3>Profesionalismo</h3><p>Equipo capacitado y comprometido.</p></div>
+    <div><h3>Bienestar</h3><p>Vida activa y confortable.</p></div>
+    <div><h3>Sentido de hogar</h3><p>Un lugar donde compartir y pertenecer.</p></div>
+  </div>
+</section>
+
+<section class="wrap bloque" id="servicios">
+  <h2 class="t">Servicios</h2>
+  <div class="dos">
+    <div><h3>Instalaciones</h3><ul><li>Habitaciones equipadas y calefaccionadas</li><li>Baños adaptados</li><li>Videovigilancia y Wi-Fi</li></ul></div>
+    <div><h3>Alimentación</h3><ul><li>Desayuno, almuerzo, merienda, cena y colaciones</li><li>Dietas especiales</li></ul>
+      <h3 style="margin-top:1.2rem">Talleres y enfermería</h3><ul><li>Talleres recreativos y gimnasia funcional</li><li>Administración de medicación</li><li>Seguimiento diario</li></ul></div>
+  </div>
+</section>
+
+<section class="wrap bloque" id="instalaciones">
+  <h2 class="t">Instalaciones</h2>
+  <div class="fotos">
+    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
+    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792430/monarca/instalaciones/habitacion2.webp" alt="Habitación 2 de Residencial Monarca" loading="lazy"><figcaption>Habitación 2</figcaption></figure>
+    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792432/monarca/instalaciones/habitacion3.webp" alt="Habitación 3 de Residencial Monarca" loading="lazy"><figcaption>Habitación 3</figcaption></figure>
+    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792423/monarca/instalaciones/living.webp" alt="Living de Residencial Monarca" loading="lazy"><figcaption>Living</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap bloque" id="galeria">
+  <h2 class="t">Galería</h2>
+  <div class="fotos" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
+</section>
+
+<section class="contacto" id="contacto">
+  <h2 style="font-size:2.2rem;font-weight:600;margin-bottom:1rem">Contacto</h2>
+  <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo</p>
+  <p style="margin:.8rem 0"><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
+  <p><a href="https://www.instagram.com/recidencialmonarca">Instagram</a> · <a href="https://www.facebook.com/share/1JEh8uoqEZ/">Facebook</a></p>
+</section>
+
+<footer>© Residencial Monarca · Montevideo, Uruguay</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/galeria-cloudinary.js"></script>
+</body>
+</html>
