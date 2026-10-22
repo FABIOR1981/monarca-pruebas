@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "versiones/*.html"
+        ],
+        "createdAt": "2026-10-22T21:54:21.867Z",
+        "reason": "Full-width sections use percentage horizontal padding (6%) and inset cards with clamp() padding; detector misreads them as flush."
+      }
+    ]
+  }
+}
