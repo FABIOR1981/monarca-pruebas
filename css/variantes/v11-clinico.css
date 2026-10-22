@@ -1,0 +1,45 @@
+/* Variante 11 · Clínico
+   Alto contraste, tipografía grande y botones amplios para facilitar
+   la lectura y el uso a personas mayores y sus familias. */
+
+:root {
+    --primary: #1F5C57;
+    --primary-dark: #14413E;
+    --accent: #2E8B84;
+    --bg-light: #FFFFFF;
+    --text-main: #111827;
+    --text-muted: #374151;
+    --card-radius: 12px;
+    --shadow: 0 4px 14px rgba(31, 92, 87, 0.10);
+    --border-card: 2px solid #CFE3E1;
+}
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+h2.section-title {
+    font-size: 2.4rem;
+    color: var(--primary-dark);
+}
+
+.value-item,
+.service-block,
+.card-director,
+.card-mv {
+    border: var(--border-card);
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: var(--card-radius);
+    background: var(--primary);
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}

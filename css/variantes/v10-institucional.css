@@ -1,0 +1,48 @@
+/* Variante 10 · Institucional
+   Formal y sobrio: encabezados serif centrados, filetes finos, tono de
+   institución de salud consolidada. */
+
+:root {
+    --primary: #3E4F42;
+    --primary-dark: #2A3830;
+    --accent: #9C7A4E;
+    --bg-light: #FAF9F6;
+    --text-main: #26302A;
+    --text-muted: #5F6A62;
+    --card-radius: 8px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.05);
+    --border-card: 1px solid #DCD8CC;
+}
+
+body {
+    font-size: 1.07rem;
+}
+
+h2.section-title {
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+h2.section-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0.9rem auto 0;
+}
+
+.value-item,
+.service-block,
+.card-director,
+.card-mv {
+    border: var(--border-card);
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+
+.btn {
+    border-radius: var(--card-radius);
+    letter-spacing: 0.03em;
+}

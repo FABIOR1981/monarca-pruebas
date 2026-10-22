@@ -1,0 +1,46 @@
+/* Variante 7 · Pastel
+   Tonos suaves verde salvia y arena, tarjetas muy redondeadas y cálidas.
+   Pensada para transmitir hogar y calma. */
+
+:root {
+    --primary: #7D9A82;
+    --primary-dark: #55705B;
+    --accent: #E8C9A0;
+    --bg-light: #F7F3EC;
+    --text-main: #3A4A3E;
+    --text-muted: #6E7A70;
+    --white: #FFFCF7;
+    --card-radius: 28px;
+    --shadow: 0 12px 32px rgba(125, 154, 130, 0.15);
+    --border-card: 1px solid rgba(125, 154, 130, 0.18);
+}
+
+body {
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 5.5rem 6%;
+}
+
+h2.section-title {
+    color: var(--primary-dark);
+}
+
+.value-item,
+.service-block,
+.card-director,
+.card-mv {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+}
+
+.btn {
+    border-radius: 999px;
+    background: var(--primary);
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
