@@ -1,0 +1,39 @@
+/* Versión 1 · Clásico
+   Hero centrado sobre foto, título serif grande, dos columnas de "Sobre nosotros"
+   en tarjetas crema con filete dorado. */
+
+:root {
+    --primary: #4A5D4E;
+    --primary-dark: #2F3D33;
+    --accent: #B08A4E;
+    --bg-light: #F5F1E8;
+    --white: #FFFDF8;
+    --text-main: #2C352D;
+    --text-muted: #5F6A62;
+    --card-radius: 6px;
+    --shadow: 0 6px 18px rgba(47, 61, 51, 0.10);
+    --border-card: 1px solid #E2D6BE;
+}
+
+body { font-size: 1.05rem; }
+
+.hero { height: 92vh; }
+.hero-content h1 { font-size: clamp(3rem, 8vw, 5.5rem); letter-spacing: 0.12em; }
+.hero-content h2 { font-style: italic; font-size: 1.6rem; }
+
+.section-title { font-size: 2.2rem; }
+
+.card-director, .combined-mv {
+    background: var(--white);
+    border: var(--border-card);
+    box-shadow: var(--shadow);
+    border-top: 3px solid var(--accent);
+}
+
+.value-item {
+    background: var(--white);
+    border: var(--border-card);
+    text-align: center;
+}
+
+.service-block { border-top: 3px solid var(--accent); }

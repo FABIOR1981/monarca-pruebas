@@ -1,0 +1,51 @@
+/* Versión 3 · Oscuro
+   Fondo verde bosque profundo, texto claro y acentos dorados.
+   Sensación nocturna y serena. */
+
+:root {
+    --primary: #C9A96E;
+    --primary-dark: #E8D3A6;
+    --accent: #C9A96E;
+    --bg-light: #15201A;
+    --white: #1F2D25;
+    --text-main: #EDE8DC;
+    --text-muted: #B3B9AE;
+    --card-radius: 12px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    --border-card: 1px solid rgba(201, 169, 110, 0.22);
+}
+
+body { background: var(--bg-light); color: var(--text-main); }
+header { background: rgba(21, 32, 26, 0.92); }
+nav a, .logo { color: var(--text-main); }
+nav a:hover { color: var(--accent); }
+h1, h2, h3 { color: var(--text-main); }
+.section-title { color: var(--accent); }
+.section-title::after { background: var(--accent); }
+
+section, .gallery-container { background: var(--bg-light); }
+#servicios { background: #111A15 !important; }
+
+.card-director, .combined-mv, .value-item, .service-block {
+    background: var(--white);
+    border: var(--border-card);
+    box-shadow: var(--shadow);
+    color: var(--text-main);
+}
+.service-list li::before { color: var(--accent); }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(21,32,26,0.2), rgba(21,32,26,0.95));
+    pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; }
+
+.btn {
+    background: var(--accent);
+    color: #15201A;
+    border-radius: 4px;
+}
+.btn:hover { background: #E8D3A6; color: #15201A; }

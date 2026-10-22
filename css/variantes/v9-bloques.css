@@ -1,0 +1,40 @@
+/* Versión 9 · Bloques de color
+   Cada sección es una banda de color a ancho completo, alternando tonos
+   y contenido centrado. Muy visual y ordenado por secciones. */
+
+:root {
+    --primary: #2F5E4E;
+    --primary-dark: #1F4236;
+    --accent: #F2C14E;
+    --bg-light: #FFFFFF;
+    --white: #FFFFFF;
+    --text-main: #1E2F27;
+    --text-muted: #35493F;
+    --card-radius: 14px;
+    --shadow: 0 8px 20px rgba(0,0,0,0.10);
+    --border-card: none;
+}
+
+body { font-size: 1.06rem; }
+
+.hero { height: 80vh; }
+
+#mision-vision { background: #2F5E4E; }
+#mision-vision .section-title { color: #FFFFFF; }
+#mision-vision .section-title::after { background: var(--accent); }
+#valores { background: #F2C14E; }
+#valores .section-title { color: #1E2F27; }
+#valores .section-title::after { background: #1E2F27; }
+#servicios { background: #FFFFFF !important; }
+#instalaciones { background: #E9F1EC; }
+#galeria { background: #1F4236; }
+#galeria .section-title, #galeria .gallery-filters p { color: #FFFFFF; }
+
+.section-title::after { height: 4px; }
+
+.card-director, .combined-mv { background: #FFFFFF; border-radius: var(--card-radius); }
+.value-item { background: transparent; border: none; box-shadow: none; text-align: center; }
+.service-block { background: #F4F8F5; border: none; box-shadow: none; border-radius: var(--card-radius); }
+
+.btn { background: #F2C14E; color: #1E2F27; border-radius: 6px; }
+.btn:hover { background: #E3B03C; }

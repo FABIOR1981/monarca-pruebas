@@ -1,0 +1,52 @@
+/* Versión 2 · Editorial
+   Sin tarjetas ni sombras. Títulos serif enormes alineados a la izquierda,
+   secciones separadas por líneas finas y contenido en una sola columna de lectura. */
+
+:root {
+    --primary: #2F3D33;
+    --primary-dark: #1E2A22;
+    --accent: #4A5D4E;
+    --bg-light: #FFFFFF;
+    --white: #FFFFFF;
+    --text-main: #1E2A22;
+    --text-muted: #5F6A62;
+    --card-radius: 0;
+    --shadow: none;
+    --border-card: none;
+}
+
+body { font-size: 1.1rem; line-height: 1.85; }
+
+.hero {
+    height: 90vh;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 10%;
+}
+.hero-content { max-width: 760px; }
+.hero-content h1 { font-size: clamp(4rem, 12vw, 9rem); line-height: 0.9; font-weight: 700; }
+.hero-content h2 { font-size: 1.5rem; font-style: italic; }
+
+section { padding: 6rem 10%; border-top: 1px solid #D9DDD6; }
+.section-title {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.section-title::after { display: none; }
+
+.about-grid,
+.values-grid,
+.services-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0;
+}
+
+.card-director, .combined-mv, .value-item, .service-block {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+.value-item { border-left: 2px solid var(--primary); padding-left: 1.5rem; }

@@ -1,0 +1,56 @@
+/* Versión 5 · Orgánico
+   Formas redondeadas e irregulares, tonos tierra suaves y bordes muy curvos.
+   Sensación natural, cercana al jardín. */
+
+:root {
+    --primary: #5E7A5C;
+    --primary-dark: #3F5A3D;
+    --accent: #C48E5B;
+    --bg-light: #F6F1E6;
+    --white: #FFFBF3;
+    --text-main: #33402F;
+    --text-muted: #6B6F5E;
+    --card-radius: 46% 54% 52% 48% / 42% 46% 54% 58%;
+    --shadow: 0 14px 30px rgba(94, 122, 92, 0.14);
+    --border-card: none;
+}
+
+body { font-size: 1.08rem; }
+
+.hero {
+    height: 95vh;
+    border-radius: 0 0 60% 60% / 0 0 12% 12%;
+}
+.hero-content h1 { font-family: 'Playfair Display', serif; letter-spacing: 0.06em; }
+
+.section-title { color: var(--primary-dark); }
+.section-title::after {
+    height: 10px;
+    border-radius: 999px;
+    background: var(--accent);
+    width: 90px;
+}
+
+.card-director, .combined-mv {
+    border-radius: 36px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.value-item {
+    border-radius: 48% 52% 44% 56% / 52% 44% 56% 48%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    padding: 3rem 2.2rem;
+}
+
+.service-block { border-radius: 40px; background: var(--white); box-shadow: var(--shadow); }
+.gallery-item { border-radius: 40px; }
+
+.btn {
+    border-radius: 999px;
+    background: var(--accent);
+    color: #FFFFFF;
+    padding: 0.9rem 2.2rem;
+}
+.btn:hover { background: #A8703F; }
