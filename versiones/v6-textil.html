@@ -4,126 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Monarca · Versión 6 · Textil</title>
+<title>Monarca · Versión 6 · Bloques</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --indigo:#2D3A5A; --lino:#E7E3DA; --oxido:#B5563A; --salvia:#7C9A7E; --tinta:#1E1E24; --gris:#4A4D57; }
+  :root { --ink:#1B1F2A; --gris:#4B5263; --bg:#F6F7F9; --card:#FFFFFF; --sage:#DCE8DF; --sage-d:#2E5A43; --coral:#E8634A; --linea:#E2E5EB; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Outfit', sans-serif; font-size: 1.16rem; line-height: 1.7; color: var(--tinta); background: #F7F6F2; }
-  :focus-visible { outline: 3px solid var(--oxido); outline-offset: 3px; }
-  .tiras { height: 14px; background: repeating-linear-gradient(90deg, var(--indigo) 0 40px, var(--lino) 40px 52px, var(--oxido) 52px 64px, var(--lino) 64px 76px, var(--salvia) 76px 88px, var(--lino) 88px 100px); }
-  header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 6%; }
-  header img { width: 110px; }
-  header nav a { color: var(--indigo); text-decoration: none; margin-left: 1.3rem; font-weight: 500; }
-  .inicio { padding: 4rem 6% 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; }
-  .inicio h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(3.2rem, 8vw, 5.6rem); font-weight: 700; color: var(--indigo); line-height: 1; }
-  .inicio h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.6rem; font-weight: 500; margin: 1rem 0; }
-  .inicio p { color: var(--gris); max-width: 480px; margin-bottom: 1.8rem; }
-  .boton { display: inline-block; background: var(--oxido); color: #fff; padding: .95rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500; }
-  .inicio .foto { height: 380px; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200/v1/monarca/instalaciones/fachada.webp') center/cover; border-radius: 4px; }
-  .banda { padding: 4rem 6%; }
-  .banda h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--indigo); padding: .6rem 0 .6rem 1.2rem; border-left: 12px solid var(--oxido); margin-bottom: 2rem; }
-  .banda.lino { background: var(--lino); }
-  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
-  .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-  .vals div { background: #fff; padding: 1.4rem; border-top: 6px solid var(--salvia); }
-  .vals h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: .3rem; color: var(--indigo); }
-  .vals p { font-size: 1rem; color: var(--gris); margin: 0; }
-  .dos h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--indigo); margin-bottom: .4rem; }
-  .dos p, .dos li { color: var(--gris); }
-  .dos ul { padding-left: 1.2rem; }
-  .fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
-  figure img { width: 100%; height: 240px; object-fit: cover; }
-  figcaption { font-size: 1rem; color: var(--gris); margin-top: .35rem; }
-  .contacto { background: var(--indigo); color: #fff; padding: 4.5rem 6%; }
-  .contacto h2 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; }
-  .contacto a { color: #fff; font-weight: 500; text-decoration: underline; }
-  footer { text-align: center; padding: 1.4rem; color: var(--gris); }
-  @media (max-width: 820px) { .inicio, .dos { grid-template-columns: 1fr; } .vals { grid-template-columns: 1fr 1fr; } header nav { display: none; } }
-  @media (max-width: 560px) { .vals { grid-template-columns: 1fr; } }
+  body { font-family: 'Outfit', system-ui, sans-serif; font-size: 1.12rem; line-height: 1.65; color: var(--ink); background: var(--bg); }
+  :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; position: sticky; top: 0; background: var(--bg); z-index: 5; }
+  header img { width: 104px; }
+  header nav a { color: var(--ink); text-decoration: none; margin-left: 1.3rem; font-weight: 500; }
+  header nav a:hover { color: var(--sage-d); }
+  .grilla { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; padding: 1rem 5% 1.2rem; }
+  .celda { background: var(--card); border-radius: 24px; padding: 2.6rem; }
+  .hero-texto { grid-column: span 6; background: var(--sage); display: flex; flex-direction: column; justify-content: center; min-height: 480px; }
+  .hero-texto h1 { font-size: clamp(3.4rem, 8vw, 6rem); font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--sage-d); }
+  .hero-texto h2 { font-size: 1.6rem; font-weight: 500; margin: 1.2rem 0 .8rem; }
+  .hero-texto p { color: var(--gris); max-width: 40ch; margin-bottom: 1.8rem; }
+  .boton { align-self: flex-start; background: var(--ink); color: #fff; padding: .95rem 1.8rem; border-radius: 999px; text-decoration: none; font-weight: 600; }
+  .boton:hover { background: var(--sage-d); }
+  .hero-foto { grid-column: span 6; min-height: 480px; border-radius: 24px; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200/v1/monarca/instalaciones/fachada.webp') center/cover; }
+  .nosotros { grid-column: span 12; display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: start; }
+  .nosotros img { width: 180px; height: auto; border-radius: 18px; }
+  .nosotros h2, .bloque-t { font-size: 2rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: 1rem; }
+  .nosotros h3 { font-size: 1.2rem; font-weight: 600; margin: 1.4rem 0 .3rem; color: var(--sage-d); }
+  .nosotros h3:first-of-type { margin-top: 1rem; }
+  .nosotros p, .celda p, .celda li { color: var(--gris); }
+  .valor { grid-column: span 4; }
+  .valor h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .4rem; }
+  .valor p { margin: 0; }
+  .valor.acento { background: var(--sage-d); color: #fff; }
+  .valor.acento h3 { color: #fff; }
+  .valor.acento p { color: #E4EFE8; }
+  .serv { grid-column: span 6; }
+  .serv h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .6rem; color: var(--sage-d); }
+  ul { list-style: none; }
+  li { padding: .45rem 0; border-bottom: 1px solid var(--linea); }
+  li:last-child { border-bottom: 0; }
+  .sec-titulo { grid-column: span 12; padding: 2.6rem 5% .4rem; }
+  .sec-titulo h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -.02em; }
+  .foto-chica { grid-column: span 6; padding: 0; overflow: hidden; border-radius: 24px; }
+  .foto-chica img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; display: block; }
+  .foto-chica figcaption { position: absolute; }
+  figure { position: relative; }
+  .fotos-bento { grid-column: span 12; display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
+  .fotos-bento figure { grid-column: span 6; background: var(--card); border-radius: 24px; overflow: hidden; }
+  .fotos-bento figure:first-child { grid-column: span 8; }
+  .fotos-bento figure:nth-child(2) { grid-column: span 4; }
+  .fotos-bento img { width: 100%; height: 320px; object-fit: cover; display: block; }
+  figcaption { padding: .8rem 1.2rem; color: var(--gris); font-size: .98rem; }
+  .galeria { grid-column: span 12; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+  .galeria figure { background: var(--card); border-radius: 24px; overflow: hidden; }
+  .galeria img { width: 100%; height: 240px; object-fit: cover; display: block; }
+  .contacto { grid-column: span 12; background: var(--ink); color: #fff; }
+  .contacto h2 { font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.2rem; }
+  .contacto p { color: #D9DEE8; margin-bottom: .5rem; font-size: 1.1rem; }
+  .contacto a { color: #fff; font-weight: 600; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  footer { text-align: center; padding: 1.8rem 5%; color: var(--gris); font-size: .98rem; }
+  @media (max-width: 900px) { .hero-texto, .hero-foto, .nosotros, .valor, .serv, .foto-chica { grid-column: span 12; } .valor { grid-column: span 6; } .fotos-bento figure, .fotos-bento figure:first-child, .fotos-bento figure:nth-child(2) { grid-column: span 12; } header nav { display: none; } }
+  @media (max-width: 560px) { .valor { grid-column: span 12; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
-<div class="tiras" aria-hidden="true"></div>
 <header>
   <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
-  <nav><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#instalaciones">Instalaciones</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
+  <nav><a href="#nosotros">Nosotros</a><a href="#valores">Valores</a><a href="#servicios">Servicios</a><a href="#instalaciones">Instalaciones</a><a href="#contacto">Contacto</a></nav>
 </header>
 
-<section class="inicio" id="inicio">
-  <div>
+<main class="grilla">
+  <section class="celda hero-texto" id="inicio">
     <h1>Monarca</h1>
     <h2>Un hogar donde cuidar es acompañar</h2>
     <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
     <a class="boton" href="#contacto">Contactate con nosotros</a>
-  </div>
-  <div class="foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
-</section>
+  </section>
+  <div class="hero-foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
 
-<section class="banda lino" id="nosotros">
-  <h2>Sobre nosotros</h2>
-  <div class="dos">
+  <section class="celda nosotros" id="nosotros">
     <div>
-      <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="150" height="202" style="display:block;width:150px;height:auto;margin:0 0 1rem;border-radius:4px">
-      <h3>Dirección y compromiso</h3>
-      <p><strong>Javier Bia</strong>, Lic. en Enfermería, con más de 20 años de experiencia en salud, especialmente en salud mental y el cuidado de personas, y formación en geriatría.</p>
+      <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="180" height="242">
+      <h3 style="margin-top:1.2rem;color:var(--ink)">Javier Bia</h3>
+      <p>Lic. en Enfermería, director del residencial. Más de 20 años de experiencia en salud, especialmente en salud mental y el cuidado de personas, y formación en geriatría.</p>
     </div>
     <div>
+      <h2>Sobre nosotros</h2>
       <h3>Misión</h3>
       <p>Brindar un hogar cálido, seguro y acogedor, donde cada persona sea cuidada con respeto, empatía y dedicación.</p>
-      <h3 style="margin-top:1.4rem">Visión</h3>
+      <h3>Visión</h3>
       <p>Ser un residencial reconocido por la calidad humana de su atención, la confianza de las familias y el compromiso con el bienestar integral de sus residentes.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="banda" id="valores">
-  <h2>Valores</h2>
-  <div class="vals">
-    <div><h3>Calidez humana</h3><p>Cercanía, afecto y escucha.</p></div>
-    <div><h3>Respeto y dignidad</h3><p>Historia y costumbres de cada residente.</p></div>
-    <div><h3>Seguridad y confianza</h3><p>Un entorno seguro y tranquilo.</p></div>
-    <div><h3>Profesionalismo</h3><p>Equipo capacitado y comprometido.</p></div>
-    <div><h3>Bienestar</h3><p>Vida activa y confortable.</p></div>
-    <div><h3>Sentido de hogar</h3><p>Un lugar donde compartir y pertenecer.</p></div>
-  </div>
-</section>
+  <section class="sec-titulo" id="valores"><h2>Valores</h2></section>
+  <div class="celda valor"><h3>Calidez humana</h3><p>Cercanía, afecto y escucha.</p></div>
+  <div class="celda valor acento"><h3>Respeto y dignidad</h3><p>Historia y costumbres de cada residente.</p></div>
+  <div class="celda valor"><h3>Seguridad y confianza</h3><p>Un entorno seguro y tranquilo.</p></div>
+  <div class="celda valor acento"><h3>Profesionalismo</h3><p>Equipo capacitado y comprometido.</p></div>
+  <div class="celda valor"><h3>Bienestar</h3><p>Vida activa y confortable.</p></div>
+  <div class="celda valor"><h3>Sentido de hogar</h3><p>Un lugar donde compartir y pertenecer.</p></div>
 
-<section class="banda lino" id="servicios">
-  <h2>Servicios</h2>
-  <div class="dos">
-    <div><h3>Instalaciones</h3><ul><li>Habitaciones equipadas y calefaccionadas</li><li>Baños adaptados</li><li>Videovigilancia y Wi-Fi</li></ul></div>
-    <div><h3>Alimentación</h3><ul><li>Desayuno, almuerzo, merienda, cena y colaciones</li><li>Dietas especiales</li></ul></div>
-    <div><h3>Talleres y actividades</h3><ul><li>Talleres recreativos</li><li>Gimnasia funcional</li><li>Manualidades y encuentro</li></ul></div>
-    <div><h3>Equipo de enfermería</h3><ul><li>Administración de medicación</li><li>Seguimiento diario</li><li>Coordinación con familias</li></ul></div>
-  </div>
-</section>
+  <section class="sec-titulo" id="servicios"><h2>Servicios</h2></section>
+  <div class="celda serv"><h3>Instalaciones</h3><ul><li>Habitaciones equipadas y calefaccionadas</li><li>Baños adaptados</li><li>Videovigilancia y Wi-Fi</li></ul></div>
+  <div class="celda serv"><h3>Alimentación</h3><ul><li>Desayuno, almuerzo, merienda, cena y colaciones</li><li>Dietas especiales</li></ul></div>
+  <div class="celda serv"><h3>Talleres y actividades</h3><ul><li>Talleres recreativos</li><li>Gimnasia funcional</li><li>Manualidades y encuentro</li></ul></div>
+  <div class="celda serv"><h3>Equipo de enfermería</h3><ul><li>Administración de medicación</li><li>Seguimiento diario</li><li>Coordinación con familias</li></ul></div>
 
-<section class="banda" id="instalaciones">
-  <h2>Instalaciones</h2>
-  <div class="fotos">
+  <section class="sec-titulo" id="instalaciones"><h2>Instalaciones</h2></section>
+  <div class="fotos-bento">
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792430/monarca/instalaciones/habitacion2.webp" alt="Habitación 2 de Residencial Monarca" loading="lazy"><figcaption>Habitación 2</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792432/monarca/instalaciones/habitacion3.webp" alt="Habitación 3 de Residencial Monarca" loading="lazy"><figcaption>Habitación 3</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792423/monarca/instalaciones/living.webp" alt="Living de Residencial Monarca" loading="lazy"><figcaption>Living</figcaption></figure>
   </div>
-</section>
 
-<section class="banda lino" id="galeria">
-  <h2>Galería</h2>
-  <div class="fotos" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
-</section>
+  <section class="sec-titulo" id="galeria"><h2>Galería</h2></section>
+  <div class="galeria" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
 
-<section class="contacto" id="contacto">
-  <h2>Contacto</h2>
-  <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo</p>
-  <p style="margin:.8rem 0"><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
-  <p><a href="https://www.instagram.com/recidencialmonarca">Instagram</a> · <a href="https://www.facebook.com/share/1JEh8uoqEZ/">Facebook</a></p>
-</section>
+  <section class="celda contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo</p>
+    <p><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
+    <p><a href="https://www.instagram.com/recidencialmonarca">Instagram</a> · <a href="https://www.facebook.com/share/1JEh8uoqEZ/">Facebook</a></p>
+  </section>
+</main>
 
 <footer>© Residencial Monarca · Montevideo, Uruguay</footer>
 

@@ -4,55 +4,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Monarca · Versión 9 · Mar</title>
+<title>Monarca · Versión 9 · Costa</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --profundo:#0F4C5C; --espuma:#E6F0F1; --brisa:#7FB7BE; --arena:#F3F6F5; --tinta:#15272B; --gris:#3D5358; }
+  :root { --profundo:#0F4C5C; --profundo-d:#093541; --espuma:#EEF5F6; --brisa:#6FB1BA; --ink:#13262B; --gris:#3E5A60; --linea:#D2E2E5; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Anek Latin', sans-serif; font-size: 1.16rem; line-height: 1.7; color: var(--tinta); background: var(--arena); }
-  :focus-visible { outline: 3px solid var(--profundo); outline-offset: 3px; }
-  header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 6%; background: var(--arena); }
-  header img { width: 110px; }
-  header nav a { color: var(--profundo); text-decoration: none; margin-left: 1.4rem; font-weight: 500; }
-  .orilla { background: var(--profundo); color: #fff; padding: 6rem 6% 5rem; display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: end; }
-  .orilla h1 { font-size: clamp(3.4rem, 8vw, 6rem); font-weight: 700; line-height: 1; }
-  .orilla h2 { font-size: 1.6rem; font-weight: 400; margin: 1rem 0; color: #CDE6EA; }
-  .orilla p { color: #D6EAEE; max-width: 460px; }
-  .boton { display: inline-block; margin-top: 1.4rem; background: #fff; color: var(--profundo); padding: .95rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; }
-  .orilla .foto { height: 340px; border-radius: 6px; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200/v1/monarca/instalaciones/fachada.webp') center/cover; }
-  .franja { padding: 4.5rem 6%; }
-  .franja h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--profundo); margin-bottom: 2rem; }
-  .espuma { background: var(--espuma); }
-  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; }
-  .dos h3 { font-size: 1.4rem; font-weight: 700; color: var(--profundo); margin-bottom: .4rem; }
-  .dos p, .dos li { color: var(--gris); }
-  .dos ul { padding-left: 1.2rem; margin-bottom: 1rem; }
-  .sobre-img { width: 160px; height: auto; border-radius: 6px; margin-bottom: 1.2rem; }
-  .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 4px solid var(--brisa); }
-  .vals div { padding: 1.6rem 1.4rem 1.6rem 0; border-bottom: 1px solid #C6DCE0; }
-  .vals h3 { font-size: 1.3rem; font-weight: 700; color: var(--profundo); margin-bottom: .3rem; }
-  .vals p { color: var(--gris); margin: 0; font-size: 1.05rem; }
-  .fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
-  figure img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; }
-  figcaption { font-size: 1rem; color: var(--gris); margin-top: .35rem; }
-  .contacto { background: var(--profundo); color: #fff; padding: 4.5rem 6%; }
-  .contacto h2 { color: #fff; font-size: 2.2rem; margin-bottom: 1rem; }
-  .contacto a { color: #fff; font-weight: 700; }
-  footer { text-align: center; padding: 1.5rem; color: var(--gris); }
-  @media (max-width: 820px) { .orilla, .dos { grid-template-columns: 1fr; } .vals { grid-template-columns: 1fr; } .orilla .foto { height: 240px; } header nav { display: none; } }
+  body { font-family: 'Anek Latin', system-ui, sans-serif; font-size: 1.15rem; line-height: 1.7; color: var(--ink); background: #fff; }
+  :focus-visible { outline: 3px solid var(--brisa); outline-offset: 3px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.3rem 6%; position: sticky; top: 0; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); z-index: 5; border-bottom: 1px solid var(--linea); }
+  header img { width: 104px; }
+  header nav a { color: var(--profundo); text-decoration: none; margin-left: 1.5rem; font-weight: 600; }
+  header nav a:hover { color: var(--brisa); }
+  .inicio { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 5rem 6% 6rem; }
+  .inicio h1 { font-size: clamp(3.6rem, 8vw, 6rem); font-weight: 700; letter-spacing: -.02em; line-height: 1; color: var(--profundo); }
+  .inicio h2 { font-size: 1.6rem; font-weight: 500; margin: 1.2rem 0 .9rem; }
+  .inicio p { color: var(--gris); max-width: 44ch; margin-bottom: 2.2rem; font-size: 1.2rem; }
+  .boton { display: inline-block; background: var(--profundo); color: #fff; padding: 1rem 2rem; border-radius: 999px; text-decoration: none; font-weight: 700; }
+  .boton:hover { background: var(--profundo-d); }
+  .inicio .foto { height: 520px; border-radius: 28px; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200/v1/monarca/instalaciones/fachada.webp') center/cover; }
+  .bloque { padding: 6rem 6%; }
+  .bloque h2 { font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 700; color: var(--profundo); letter-spacing: -.02em; margin-bottom: 2.6rem; }
+  .bloque.espuma { background: var(--espuma); }
+  .sobre { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
+  .sobre img { width: 280px; height: auto; border-radius: 22px; }
+  .sobre h3 { font-size: 1.45rem; font-weight: 700; color: var(--profundo); margin-bottom: .5rem; }
+  .sobre h3:not(:first-child) { margin-top: 2rem; }
+  .sobre p { color: var(--gris); max-width: 60ch; }
+  .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem 2.4rem; }
+  .vals div { border-top: 3px solid var(--brisa); padding-top: 1.2rem; }
+  .vals h3 { font-size: 1.25rem; font-weight: 700; color: var(--profundo); margin-bottom: .3rem; }
+  .vals p { color: var(--gris); margin: 0; }
+  .serv { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .serv h3 { font-size: 1.35rem; font-weight: 700; color: var(--profundo); margin-bottom: .6rem; }
+  .serv ul { padding-left: 1.2rem; color: var(--gris); margin-bottom: 2rem; }
+  .serv li { margin-bottom: .4rem; }
+  .fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.4rem; }
+  figure img { width: 100%; height: 300px; object-fit: cover; border-radius: 22px; display: block; }
+  figcaption { font-size: 1rem; color: var(--gris); margin-top: .6rem; }
+  .contacto { background: var(--profundo); color: #E3F0F2; padding: 6rem 6%; border-radius: 40px 40px 0 0; }
+  .contacto h2 { color: #fff; font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: 1.4rem; }
+  .contacto p { font-size: 1.15rem; margin-bottom: .5rem; }
+  .contacto a { color: #fff; font-weight: 700; text-underline-offset: 4px; }
+  footer { text-align: center; padding: 1.6rem; color: var(--gris); font-size: .95rem; }
+  @media (max-width: 860px) { .inicio, .sobre, .serv { grid-template-columns: 1fr; gap: 2.4rem; } .vals { grid-template-columns: 1fr; } .sobre img { width: 220px; } .inicio .foto { height: 360px; } header nav { display: none; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
 <header>
   <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
-  <nav><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#instalaciones">Instalaciones</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
+  <nav><a href="#nosotros">Nosotros</a><a href="#valores">Valores</a><a href="#servicios">Servicios</a><a href="#instalaciones">Instalaciones</a><a href="#contacto">Contacto</a></nav>
 </header>
 
-<section class="orilla" id="inicio">
+<section class="inicio" id="inicio">
   <div>
     <h1>Monarca</h1>
     <h2>Un hogar donde cuidar es acompañar</h2>
@@ -62,24 +69,22 @@
   <div class="foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
 </section>
 
-<section class="franja" id="nosotros">
+<section class="bloque" id="nosotros">
   <h2>Sobre nosotros</h2>
-  <div class="dos">
+  <div class="sobre">
+    <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="280" height="378">
     <div>
-      <img class="sobre-img" src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="160" height="216">
       <h3>Dirección y compromiso</h3>
       <p><strong>Javier Bia</strong>, Lic. en Enfermería, con más de 20 años de experiencia en salud, especialmente en salud mental y el cuidado de personas, y formación en geriatría.</p>
-    </div>
-    <div>
       <h3>Misión</h3>
       <p>Brindar un hogar cálido, seguro y acogedor, donde cada persona sea cuidada con respeto, empatía y dedicación.</p>
-      <h3 style="margin-top:1.4rem">Visión</h3>
+      <h3>Visión</h3>
       <p>Ser un residencial reconocido por la calidad humana de su atención, la confianza de las familias y el compromiso con el bienestar integral de sus residentes.</p>
     </div>
   </div>
 </section>
 
-<section class="franja espuma" id="valores">
+<section class="bloque espuma" id="valores">
   <h2>Valores</h2>
   <div class="vals">
     <div><h3>Calidez humana</h3><p>Cercanía, afecto y escucha.</p></div>
@@ -91,17 +96,17 @@
   </div>
 </section>
 
-<section class="franja" id="servicios">
+<section class="bloque" id="servicios">
   <h2>Servicios</h2>
-  <div class="dos">
+  <div class="serv">
     <div><h3>Instalaciones</h3><ul><li>Habitaciones equipadas y calefaccionadas</li><li>Baños adaptados</li><li>Videovigilancia y Wi-Fi</li></ul>
       <h3>Alimentación</h3><ul><li>Desayuno, almuerzo, merienda, cena y colaciones</li><li>Dietas especiales</li></ul></div>
-    <div><h3>Talleres y actividades</h3><ul><li>Talleres recreativos y gimnasia funcional</li><li>Manualidades y encuentro</li></ul>
+    <div><h3>Talleres y actividades</h3><ul><li>Talleres recreativos</li><li>Gimnasia funcional</li><li>Manualidades y encuentro</li></ul>
       <h3>Equipo de enfermería</h3><ul><li>Administración de medicación</li><li>Seguimiento diario</li><li>Coordinación con familias</li></ul></div>
   </div>
 </section>
 
-<section class="franja espuma" id="instalaciones">
+<section class="bloque espuma" id="instalaciones">
   <h2>Instalaciones</h2>
   <div class="fotos">
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
@@ -111,7 +116,7 @@
   </div>
 </section>
 
-<section class="franja" id="galeria">
+<section class="bloque" id="galeria">
   <h2>Galería</h2>
   <div class="fotos" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
 </section>
@@ -119,7 +124,7 @@
 <section class="contacto" id="contacto">
   <h2>Contacto</h2>
   <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo</p>
-  <p style="margin:.8rem 0"><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
+  <p><a href="https://wa.me/59899081886">WhatsApp +598 99 081 886</a></p>
   <p><a href="https://www.instagram.com/recidencialmonarca">Instagram</a> · <a href="https://www.facebook.com/share/1JEh8uoqEZ/">Facebook</a></p>
 </section>
 

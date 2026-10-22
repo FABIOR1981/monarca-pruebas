@@ -12,7 +12,7 @@
 <style>
   :root { --teal:#1F5C57; --teal2:#14413E; --blanco:#FFFFFF; --tinta:#111111; --gris:#3D4245; --linea:#D9E3E1; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Hanken Grotesk', sans-serif; font-size: 1.14rem; line-height: 1.7; color: var(--tinta); background: var(--blanco); }
+  body { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 1.14rem; line-height: 1.7; color: var(--tinta); background: var(--blanco); }
   :focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
   header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 6%; background: var(--blanco); border-bottom: 1px solid var(--linea); }
   header img { width: 100px; }
@@ -20,7 +20,9 @@
   .frase { min-height: 92vh; display: grid; place-content: center; padding: 5rem 6%; }
   .frase h1 { font-size: clamp(4rem, 13vw, 11rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; color: var(--teal); }
   .frase h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); font-weight: 500; line-height: 1.25; margin-top: 2.4rem; max-width: 20ch; }
+  .frase p { margin-top: 1.2rem; max-width: 52ch; color: var(--gris); }
   .frase .boton { margin-top: 2.4rem; display: inline-block; background: var(--teal); color: #fff; padding: 1.1rem 2.4rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.2rem; width: fit-content; }
+  .frase .boton:hover { background: var(--teal2); }
   .foto { height: 70vh; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_2000/v1/monarca/instalaciones/fachada.webp') center/cover; }
   .enunciado { padding: 6rem 6%; }
   .enunciado h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; max-width: 22ch; color: var(--teal2); }
@@ -35,9 +37,9 @@
   .valores li { font-size: 1.4rem; font-weight: 500; padding-top: 1rem; border-top: 2px solid rgba(255,255,255,.3); }
   .valores li span { display: block; font-size: 1.05rem; font-weight: 400; color: #D6E7E4; margin-top: .3rem; }
   .fotos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 0 6% 4rem; }
-  figure img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; }
-  figcaption { font-size: 1rem; color: var(--gris); margin-top: .4rem; }
   .fotos.galeria { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  figure img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; display: block; }
+  figcaption { font-size: 1rem; color: var(--gris); margin-top: .4rem; }
   .contacto { padding: 5rem 6%; border-top: 1px solid var(--linea); }
   .contacto h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; color: var(--teal2); margin-bottom: 1.4rem; }
   .contacto p { font-size: 1.25rem; margin-bottom: .6rem; }
@@ -56,7 +58,7 @@
 <section class="frase" id="inicio">
   <h1>Monarca</h1>
   <h2>Un hogar donde cuidar es acompañar.</h2>
-  <p style="margin-top:1.2rem;max-width:52ch;color:var(--gris)">Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
+  <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral.</p>
   <a class="boton" href="#contacto">Contactate con nosotros</a>
 </section>
 
@@ -106,17 +108,15 @@
   </div>
 </section>
 
-<section id="instalaciones" style="padding-top:4rem">
-  <div class="fotos">
-    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
-    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792430/monarca/instalaciones/habitacion2.webp" alt="Habitación 2 de Residencial Monarca" loading="lazy"><figcaption>Habitación 2</figcaption></figure>
-    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792432/monarca/instalaciones/habitacion3.webp" alt="Habitación 3 de Residencial Monarca" loading="lazy"><figcaption>Habitación 3</figcaption></figure>
-    <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792423/monarca/instalaciones/living.webp" alt="Living de Residencial Monarca" loading="lazy"><figcaption>Living</figcaption></figure>
-  </div>
+<section class="fotos" id="instalaciones" style="padding-top:4rem">
+  <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
+  <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792430/monarca/instalaciones/habitacion2.webp" alt="Habitación 2 de Residencial Monarca" loading="lazy"><figcaption>Habitación 2</figcaption></figure>
+  <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792432/monarca/instalaciones/habitacion3.webp" alt="Habitación 3 de Residencial Monarca" loading="lazy"><figcaption>Habitación 3</figcaption></figure>
+  <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792423/monarca/instalaciones/living.webp" alt="Living de Residencial Monarca" loading="lazy"><figcaption>Living</figcaption></figure>
 </section>
 
-<section id="galeria" style="padding-top:2rem">
-  <div class="fotos galeria" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
+<section class="fotos galeria" id="galeria" style="padding-top:2rem">
+  <div style="grid-column:1/-1" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
 </section>
 
 <section class="contacto" id="contacto">

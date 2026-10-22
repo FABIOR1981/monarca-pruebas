@@ -4,57 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Monarca · Versión 5 · Carta</title>
+<title>Monarca · Versión 5 · Diario</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
-  :root { --papel:#FFFFFF; --tinta:#1F1F1F; --lacre:#8C3B2E; --gris:#55585C; --linea:#E3E3E0; }
+  :root { --ink:#17181A; --gris:#5A5E63; --linea:#D9DBDD; --acento:#9A3B2A; --bg:#FFFFFF; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Newsreader', Georgia, serif; font-size: 1.24rem; line-height: 1.7; color: var(--tinta); background: #EFEFEC; }
-  :focus-visible { outline: 3px solid var(--lacre); outline-offset: 3px; }
-  .hoja { width: min(780px, 92%); margin: 3rem auto; background: var(--papel); padding: clamp(2rem, 6vw, 4.5rem); box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 10px 30px rgba(0,0,0,.05); }
-  header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--linea); }
-  header img { width: 120px; }
-  header nav a { color: var(--lacre); text-decoration: none; margin-left: 1.2rem; font-size: 1.05rem; }
-  .fecha { color: var(--gris); font-size: 1.05rem; margin-bottom: 2rem; }
-  h1 { font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 1.5rem; }
-  h2 { font-size: 1.7rem; font-weight: 600; margin: 2.6rem 0 .8rem; color: var(--lacre); }
-  h3 { font-size: 1.2rem; font-weight: 600; margin: 1.2rem 0 .3rem; }
-  p { margin-bottom: 1.1rem; max-width: 62ch; }
-  .firma { margin-top: 2.4rem; }
-  .firma strong { display: block; font-weight: 600; }
-  .firma span { color: var(--gris); font-size: 1.05rem; }
-  ul { padding-left: 1.3rem; margin-bottom: 1.2rem; max-width: 62ch; }
+  body { font-family: 'Newsreader', Georgia, serif; font-size: 1.22rem; line-height: 1.7; color: var(--ink); background: var(--bg); }
+  :focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 6%; border-bottom: 1px solid var(--ink); }
+  header img { width: 110px; }
+  header nav a { color: var(--ink); text-decoration: none; margin-left: 1.4rem; font-size: 1rem; font-family: 'Newsreader', serif; }
+  header nav a:hover { color: var(--acento); }
+  .portada { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; padding: 5rem 6% 4rem; align-items: end; }
+  .portada h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(3.4rem, 8vw, 6.2rem); line-height: .98; letter-spacing: -.01em; }
+
+  .portada .foto { height: 460px; background: url('https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1400/v1/monarca/instalaciones/fachada.webp') center/cover; }
+  .carta { max-width: 680px; margin: 0 auto; padding: 0 6% 5rem; }
+  .carta .lead { font-size: 1.5rem; line-height: 1.5; margin-bottom: 1.6rem; }
+  .carta p { margin-bottom: 1.2rem; }
+  .carta h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1; margin: 4.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--ink); }
+  .carta h3 { font-size: 1.15rem; font-weight: 600; margin: 1.4rem 0 .3rem; }
+  .firma-bio { display: flex; gap: 1.6rem; align-items: flex-start; flex-wrap: wrap; margin: 1.6rem 0; }
+  .firma-bio img { width: 150px; height: auto; }
+  .firma-bio div { flex: 1; min-width: 240px; }
+  ul { padding-left: 1.2rem; margin-bottom: 1rem; color: var(--gris); }
   li { margin-bottom: .3rem; }
-  .sep { text-align: center; color: var(--gris); margin: 2.6rem 0; letter-spacing: .5em; }
-  .vals { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; }
-  .fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin: 1.2rem 0 1.6rem; }
-  figure img { width: 100%; height: 220px; object-fit: cover; }
-  figcaption { font-size: 1rem; color: var(--gris); margin-top: .35rem; }
-  .contacto { border-top: 1px solid var(--linea); margin-top: 2.8rem; padding-top: 1.8rem; font-size: 1.1rem; }
-  .contacto a { color: var(--lacre); }
-  footer { text-align: center; color: var(--gris); padding: 1.6rem; font-size: 1rem; }
-  @media (max-width: 680px) { .vals, .fotos { grid-template-columns: 1fr; } header nav { display: none; } }
+  .vals { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 2.4rem; margin-top: .6rem; }
+  .vals h3 { margin-top: 0; }
+  .vals p { color: var(--gris); margin: 0; font-size: 1.05rem; }
+  .fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0 2rem; max-width: 1040px; }
+  .fotos.galeria { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  figure img { width: 100%; height: 240px; object-fit: cover; display: block; }
+  figcaption { font-size: 1rem; color: var(--gris); margin-top: .4rem; }
+  .contacto { border-top: 1px solid var(--ink); margin-top: 3rem; padding-top: 2rem; }
+  .contacto a { color: var(--acento); }
+  .contacto .firma { margin-top: 2rem; }
+  .contacto .firma strong { display: block; font-weight: 600; }
+  .contacto .firma span { color: var(--gris); font-size: 1.05rem; }
+  footer { text-align: center; color: var(--gris); padding: 2rem 6%; font-size: 1rem; border-top: 1px solid var(--linea); }
+  @media (max-width: 800px) { .portada { grid-template-columns: 1fr; gap: 2.4rem; } .portada .foto { height: 300px; } .vals { grid-template-columns: 1fr; } header nav { display: none; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
-<div class="hoja">
-  <header>
-    <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
-    <nav><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
-  </header>
+<header>
+  <img src="../img/Logo_verdeOliva_transparente.webp" alt="Residencial Monarca">
+  <nav><a href="#nosotros">Nosotros</a><a href="#valores">Valores</a><a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav>
+</header>
 
-  <p class="fecha">Montevideo, Uruguay</p>
-  <h1 id="inicio">Estimadas familias:</h1>
-  <p>Les escribimos para contarles quiénes somos y cómo cuidamos a quienes viven en Residencial Monarca. Somos un hogar donde cuidar es acompañar, con un espacio seguro, cálido y profesional pensado para el bienestar de cada persona.</p>
+<section class="portada" id="inicio">
+  <div>
+    <h1>Monarca, un hogar donde cuidar es acompañar</h1>
+  </div>
+  <div class="foto" role="img" aria-label="Fachada de Residencial Monarca"></div>
+</section>
+
+<article class="carta">
+  <p class="lead">Estimadas familias: les escribimos para contarles quiénes somos y cómo cuidamos a quienes viven en Residencial Monarca.</p>
+  <p>Brindamos un espacio seguro, cálido y profesional pensado para el bienestar integral de cada persona.</p>
 
   <h2 id="nosotros">Sobre nosotros</h2>
-  <div style="display:flex;gap:1.6rem;align-items:flex-start;flex-wrap:wrap">
-    <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="150" height="202" style="width:150px;height:auto;border-radius:4px">
-    <div style="flex:1;min-width:260px">
+  <div class="firma-bio">
+    <img src="../img/director.webp" alt="Javier Bia, director de Residencial Monarca" width="150" height="202">
+    <div>
       <p><strong>Javier Bia</strong>, Lic. en Enfermería, dirige el residencial. Tiene más de 20 años de experiencia en salud, especialmente en salud mental y en el cuidado de personas, y formación en geriatría.</p>
     </div>
   </div>
@@ -82,18 +97,24 @@
   <ul><li>Talleres recreativos y gimnasia funcional</li><li>Manualidades y momentos de encuentro</li></ul>
   <h3>Equipo de enfermería</h3>
   <ul><li>Administración de medicación y seguimiento diario</li><li>Coordinación con familias y profesionales</li></ul>
+</article>
 
-  <h2 id="instalaciones">Nuestras habitaciones</h2>
+<section style="max-width:1040px;margin:0 auto;padding:0 6%" id="instalaciones">
+  <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:2.4rem;margin-bottom:1rem">Nuestras habitaciones</h2>
   <div class="fotos">
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792426/monarca/instalaciones/habitacion1.webp" alt="Habitación 1 de Residencial Monarca" loading="lazy"><figcaption>Habitación 1</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792430/monarca/instalaciones/habitacion2.webp" alt="Habitación 2 de Residencial Monarca" loading="lazy"><figcaption>Habitación 2</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792432/monarca/instalaciones/habitacion3.webp" alt="Habitación 3 de Residencial Monarca" loading="lazy"><figcaption>Habitación 3</figcaption></figure>
     <figure><img src="https://res.cloudinary.com/p0qlmlor/image/upload/q_auto,f_auto,w_1200,c_limit/v1790792423/monarca/instalaciones/living.webp" alt="Living de Residencial Monarca" loading="lazy"><figcaption>Living</figcaption></figure>
   </div>
+</section>
 
-  <h2 id="galeria">Momentos compartidos</h2>
-  <div class="fotos" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
+<section style="max-width:1040px;margin:0 auto;padding:0 6%" id="galeria">
+  <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:2.4rem;margin-bottom:1rem">Momentos compartidos</h2>
+  <div class="fotos galeria" data-cloudinary-tag="monarca_galeria" data-vacio="Próximamente compartiremos más momentos."></div>
+</section>
 
+<div style="max-width:680px;margin:0 auto;padding:0 6% 5rem">
   <div class="contacto" id="contacto">
     <p>Si quieren conocernos o tienen alguna consulta, escríbannos.</p>
     <p>Rivera 5734 esquina Vicente Rocafuerte, Montevideo<br>WhatsApp: <a href="https://wa.me/59899081886">+598 99 081 886</a></p>
@@ -101,6 +122,7 @@
     <p class="firma"><strong>Con cariño,</strong><span>El equipo de Residencial Monarca</span></p>
   </div>
 </div>
+
 <footer>© Residencial Monarca · Montevideo, Uruguay</footer>
 
 <script src="../js/config.js"></script>
