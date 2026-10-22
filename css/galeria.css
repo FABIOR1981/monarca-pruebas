@@ -1,0 +1,107 @@
+/* Galería de versiones de Monarca: miniaturas en vivo de cada diseño */
+:root {
+  --verde: #4A5D4E;
+  --verde-oscuro: #2F3D33;
+  --tinta: #2C352D;
+  --suave: #5F6A62;
+  --madera: #D4A373;
+  --linea: #DCE2DA;
+  --fondo: #F7F6F2;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', "Segoe UI", system-ui, Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--tinta);
+  line-height: 1.6;
+}
+.contenedor { width: min(1180px, 92%); margin: 0 auto; }
+
+.cabecera { padding: 4rem 0 2.5rem; }
+.cabecera__logo { display: block; width: 150px; height: auto; margin-bottom: 1.4rem; }
+.cabecera h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 600;
+  margin: 0 0 .6rem;
+  color: var(--verde-oscuro);
+}
+.cabecera__texto { margin: 0; color: var(--suave); max-width: 560px; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 20px rgba(74, 93, 78, .08);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.version:hover, .version:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 46px rgba(74, 93, 78, .2);
+  border-color: var(--madera);
+  outline: none;
+}
+
+/* Marco de la miniatura: relación 16:10, la vista real se escala dentro */
+.version__vista {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #E9ECE6;
+  border-bottom: 1px solid var(--linea);
+}
+.version__vista iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  border: 0;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.version__info { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.version__numero {
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--verde);
+  font-weight: 600;
+}
+.version__info h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: .4rem 0 .5rem;
+  color: var(--tinta);
+}
+.version__info p { margin: 0 0 1.2rem; color: var(--suave); font-size: .95rem; }
+.version__ver { margin-top: auto; color: var(--verde); font-weight: 600; font-size: .95rem; }
+.version:hover .version__ver { color: var(--verde-oscuro); text-decoration: underline; }
+
+.pie {
+  padding: 2rem 0 3rem;
+  font-size: .9rem;
+  color: var(--suave);
+  border-top: 1px solid var(--linea);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .version { transition: none; }
+  .version:hover { transform: none; }
+}
